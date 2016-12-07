@@ -1,0 +1,95 @@
+// source: 
+// http://work.smarchal.com/twbscolor/css/b71c8d9a207dffffffecdbff0
+
+$bgDefault      : rgba(154, 32, 125, .95);
+$bgHighlight    : #9a207d;
+$colDefault     : #ffffff;
+$colHighlight   : #600d55;
+$dropDown       : false;
+
+$colHighlightBar: #9a207d;
+
+.navbar-default {
+  background-color: $bgDefault;
+  border-color: $bgHighlight;
+  .navbar-brand {
+    color: $colDefault;
+    &:hover, &:focus { 
+      color: $colHighlight; }}
+  .navbar-text {
+    color: $colDefault; 
+    font-family: 'Raleway', sans-serif;
+  }
+  .navbar-nav {
+    > li {
+      > a {
+        color: $colDefault;
+        &:hover,  &:focus {
+          color: $colHighlight; }}
+      @if $dropDown {
+        > .dropdown-menu {
+          background-color: $bgDefault;
+          > li > a {
+            color: $colDefault;
+            &:hover,  &:focus {
+              color: $colHighlight;
+              background-color: $bgHighlight; }}
+          .divider {
+            background-color: $bgHighlight;}}}
+    }
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: #600d55; 
+      }
+    }
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+  .navbar-toggle {
+    border-color: $bgHighlight;
+    &:hover, &:focus {
+      background-color: $bgHighlight; }
+    .icon-bar {
+      background-color: $colDefault; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $colDefault; }
+  .navbar-link {
+    color: $colDefault;
+    &:hover {
+      color: $colHighlight; }}}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight }}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+}
+@media (min-width: 768px) {
+  .navbar-nav {
+  > li {
+    > a {
+      border-bottom: 4px solid $bgDefault;
+      transition: border 0.75s ease;
+      color: $colDefault;
+      &:hover,  &:focus {
+        border-bottom: 4px solid $colHighlightBar;
+      }
+    }
+  }
+  > .active {
+    > a, > a:hover, > a:focus {
+      color: $colHighlight;
+      border-bottom: 4px solid $colHighlightBar;
+      transition: border 0.75s ease;
+    }
+  }
+}
+}

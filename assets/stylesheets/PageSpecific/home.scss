@@ -1,0 +1,106 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "shared";
+
+.home-section {
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.home-section-banner {
+  background-image: image-url("Homepage/hero_bg_no_fade_1000_562.jpg");
+  background-color: $background-color;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 500px;
+}
+
+@media (max-width: $size-min-sm) {
+    .home-section-banner { min-height: 700px; }
+}
+
+
+.home-section-discover {
+  background-color: $light-gray;
+  color: $dark-gray;
+}
+
+.home-section-events {
+  background-color: $purple;
+  color: $white;
+  padding: 1em;
+}
+
+.home-section-about {
+  background-color: $white;
+  color: #7f7f7f;
+  text-align: left;
+}
+.home-section-about-img {
+  background-image: image-url("Homepage/groups.jpg");
+  background-color: $background-color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+.home-section-partners {
+  background-color: $light-gray;
+  color: $dark-gray;
+  padding: 3em;
+  img.our-partners {
+    margin-right: 15px;
+  }
+}
+
+.home-section-signup {
+  background-color: $light-gray;
+  color: $dark-gray;
+  padding: 2em;
+}
+.home-section-instafeed {
+  background-color: $white;
+  color: $dark-gray;
+}
+
+
+
+/* --------------------------------- */
+/*     Font Styling                  */
+/* --------------------------------- */
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 120%;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+	line-height: 140%;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+li {
+  font-family: raleway, verdana, arial, helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .009em;
+}
