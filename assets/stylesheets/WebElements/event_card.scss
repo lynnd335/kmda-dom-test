@@ -1,0 +1,58 @@
+// Used with EventCards to:
+// 1) display image within a link...
+// 2) ...with event name overlayed on top of image with fancy animation
+// 3) ...and 'caption', which appears below image to provide extra information
+
+@import "../shared";
+
+.my-card {
+    text-align: left;
+    margin: 1em auto;
+    width: 300px;
+}
+.my-thumbnail {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  height: 350px;
+  background-color: $purple;
+}
+.my-thumbnail .a-white {
+  -webkit-transition: .3s ease-in;
+  transition: .3s ease-in;
+}
+.my-thumbnail img {
+  -webkit-transition: .1s ease-in;
+  transition: .1s ease-in;
+}
+.my-thumbnail:hover img {
+  opacity:.5;
+  vertical-align: initial;
+}
+.my-thumbnail:hover .a-white {
+  font-size: 1.1em;
+  border-bottom: 2px solid white;
+}
+.my-thumbnail:active .a-white {
+  color: lightgrey;
+}
+
+div.photo-overlay {
+  position: absolute;
+  bottom: .5em;
+  left: .5em;
+  width: 100%;
+  z-index: 2;
+  font-size: 2em;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.caption {
+  width: 100%;
+  color: $dark-gray;
+  padding: 1em;
+  margin: 0;
+  background-color: white;
+  z-index: 2;
+}

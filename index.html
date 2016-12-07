@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  
+
+<title>Komeeda</title>
+<meta name="description" content="Komeeda, Find flavorful dining events, hosted by your favorite restaurants, for the adventerous eater.">
+<meta name="keywords" content="Komeeda, dining, events, eater">
+<meta name="author" content="William Mantegna & Jabber Al-Bihani">
+
+
+<link rel="stylesheet" media="all" href="style.css">
+<link rel="stylesheet" media="all" href="more-style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="CFSvtD+1/tKKTgJ/dCSdapOVwjdz0H5mES/ZxE9lk8O3yssfqLRHhnzc0LQQJD4D7HSIbNk2S8Lb6Mk0SjdN1A==" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<div class="hidden">
+
+  
+
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+
+  <script>
+    $(document).ready(function() {
+      
+      toastr.options = {
+        "closeButton": true,
+        "newestOnTop": true,
+        "positionClass": "toast-top-right", //"toast-top-center",
+        "preventDuplicates": true,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "2000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+      }
+
+      var notice = $('#notice').text();
+      var error = $('#error').text();
+      var alert = $('#alert').text();
+
+      if (notice) { toastr["info"](notice); }
+      if (error) { toastr["error"](error); }
+      if (alert) { toastr["warning"](alert); }
+
+    });
+  </script>
+
+</div>
+
+</head>
+<body data-no-turbolink>
+
+  <div id="messages" style="display: none;">
+    <div id="alert"></div>
+    <div id="error"></div>
+    <div id="notice"></div>
+  </div>
+
+  
+
+
+<nav id="navbar" class="navbar navbar-default" style="border-radius:0; margin-bottom:0;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" style="padding-top: 1.1em; border-color: white;" data-toggle="collapse" data-target="#komeeda-navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" style="padding: 2px 2px 2px 2em;" href="/"><img style="width: 140px;" alt="Komeeda logo" src="https://komeeda.com/assets/Branding/komeeda_logo_white-c1aa25741cb0c502bdb2f54a6eed27661d624c1e6dbc81367c75f29daa6692ca.svg" /></a>
+
+          <li class="nav-item-sesh"><a href="/users/sign_in">Sign In</a></li>
+          <li class="nav-item-sesh"><a href="/users/sign_up">Register</a></li>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<script>
+
+  //hiding link_to "Sign In" and link_to "Register" instead of deleting outright
+
+  $(function(){
+    $(".nav-item-sesh").css({
+      "display":"none"
+    });
+  });
+
+</script>
+
+
+
+
+
+
+  <!-- <div class="container col-xs-12 col-sm-6 col-md-4 centered-default"> -->
+       <div class="container col-xs-12">
+	<div class="col-sm-6" id="sign-up-left-col">
+		<img id="fde" src="assets/images/Homepage/funEatingExp.png">
+		<div class="row">
+  		<div class="col-sm-3">
+  			<img class="sign-up-list-img" src="assets/images/Homepage/magnify-glass.png">
+  		</div>
+  		<div class="col-sm-9">
+  			<p class="sign-up-p-left"><span class="sign-up-underline-span">
+  			Discover</span> one-of-a-kind restaurant
+  			hosted dining experiences</p>
+  		</div>
+  	</div>
+  	<div class="row">
+  		<div class="col-sm-3">
+  			<img class="sign-up-list-img" src="assets/images/Homepage/cutlery.png">
+  		</div>
+  		<div class="col-sm-9">
+  			<p class="sign-up-p-left">
+	  			<span class="sign-up-underline-span">
+	  			Taste</span> a minimum of
+	  			<br>six different menu items</p>
+  		</div>
+  	</div>
+  	<div class="row">
+  		<div class="col-sm-3">
+  			<img class="sign-up-list-img" src="assets/images/Homepage/wine-glasses.png">
+  		</div>
+  		<div class="col-sm-9">
+  			<p class="sign-up-p-left">
+	  			<span class="sign-up-underline-span">
+	  			Interact</span> with storytelling<br>chefs/hosts and fellow eaters</p>
+  		</div>
+  	</div>
+	</div>
+	<div class="col-sm-6">
+
+	<div class="row">
+		<div class="col-sm-11">
+		<img id="fde-m" src="assets/images/Homepage/funEatingExp.png">
+			<h1 style="color:white;font-weight:bold">Sign Up</h1>
+			<p id="sign-up-p-right">
+			<b>Komeeda</b> provides flavorful, interactive multi-course<br>
+			dining experiences hosted by your favorite restaurants!<br>
+			It’s free and your RSVP includes your meal, tax & tip!</p>
+
+	<form novalidate="novalidate" class="simple_form new_user" id="new_user" action="/users" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="WzIIPBVp7hZQ1SFLwuaWzFmrPYT2DUKdgxAe9s0k0TTkrGyXgmhXQqZH84Cm5jWlJkp331zrdzlJ1w4GyHYPIw==" />
+	  
+
+	  <div class="form-inputs">
+	    	<div class="form-group email required user_email"><input class="form-control string email required" autofocus="autofocus" required="required" aria-required="true" placeholder="Email Address" type="email" value="" name="user[email]" id="user_email" /></div>
+	    	<div class="form-group password required user_password"><input class="form-control password required" required="required" aria-required="true" placeholder="Password (8 Character Minimum)" type="password" name="user[password]" id="user_password" /></div>
+	    	<div class="form-group password required user_password_confirmation"><input class="form-control password required" required="required" aria-required="true" placeholder="Password Confirmation" type="password" name="user[password_confirmation]" id="user_password_confirmation" /></div>
+	  </div>
+
+	  <div class="form-actions">
+	    		<input type="submit" name="commit" value="Create Account" class="btn btn-default btn btn-lg btn-primary btn-block primary-submit" />
+	  		</div>
+</form>
+
+
+
+
+  <a class="btn btn-lg btn-primary btn-block secondary-btn" style="margin-top: 10px;font-size: 1.5em; padding: 0.5em;color: #fff;background-color: rgba(208,23,152,0.4);border: 1px solid #fff;font-weight: bold;transition: background 0.5s linear,color 0.5s ease;" href="/users/sign_in">Sign in</a>
+
+
+  <a class="btn btn-lg btn-primary btn-block secondary-btn" style="margin-top: 10px;font-size: 1.5em; padding: 0.5em;color: #fff;background-color: rgba(208,23,152,0.4);border: 1px solid #fff;font-weight: bold;transition: background 0.5s linear,color 0.5s ease;" href="/users/confirmation/new">Resend confirmation instructions</a>
+
+
+
+<script>
+$(function(){
+
+			$(document).on("mouseover", "#confirm-btn", function() {
+				console.log($(this).attr(css));
+				$(this).css({
+					"color" : "#fff"
+				});
+			});
+
+			$(".sign-up-underline-span").css({
+				"text-decoration-color":"#f9f039"
+			});
+			// randomizes the background image to one of 
+			// the 3 cover-sized images in assets/images/Homepage
+
+			var rand = Math.floor(Math.random()* (2 - 0 + 1)) + 0;
+
+			var bgs = [
+				"assets/images/Homepage/aerial-view.png",
+				"assets/images/Homepage/table-above.png",
+				"assets/images/Homepage/makedinner1.png"
+			];
+
+			var bg = bgs[rand];
+
+			$("body").css({
+				"background-size": "cover",
+				"background-position": "center", 
+				"background-image": "url(" + bg + ")",
+				"background-repeat": "no-repeat",
+				"background-attachment": "fixed",
+				"background-color": "#7f1a67"
+				});
+
+		})
+</script>
+<!--   </div> -->
+
+  
+
+</body>
+</html>
