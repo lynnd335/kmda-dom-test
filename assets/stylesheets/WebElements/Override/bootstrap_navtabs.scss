@@ -1,0 +1,51 @@
+@import "../../shared";
+
+/* --------------------------------- */
+/* Bootstrap nav-tabs implementation */
+/* (mostly updates for colors)       */
+/* --------------------------------- */
+
+.tab-content,
+.nav-tabs li {
+  background-color: $white;
+  border: 1px solid $light-purple;
+  font-size: 1.1em;
+}
+.nav-tabs li a { color: $dark-gray; }
+.nav-tabs li a, 
+.nav-tabs li a:hover,
+.nav-tabs li a:active,
+.nav-tabs li a:focus { 
+  border-radius: 0;
+}
+
+.nav-tabs li.active a {
+  background-color: $purple;
+  color: $white;
+}
+.nav-tabs li.active a {
+  background-color: $purple;
+  color: $white;
+}
+  
+.nav-tabs li a:hover,
+.nav-tabs li.active a:hover {
+  background-color: $dark-gray;
+  color: $white;
+}
+
+.nav-tabs li.active a:focus,
+.nav-tabs li.active a:active,
+.nav-tabs li a:focus, 
+.nav-tabs li a:active {
+  background-color: $light-purple;
+  color: $white;
+}
+
+@media (max-width: 767px) {
+  /* removes awkward pre-set margin */
+  .nav-justified > li > a, 
+  .nav-tabs > li > a {
+    margin-bottom: 0;
+  }
+}

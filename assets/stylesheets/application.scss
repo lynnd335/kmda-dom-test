@@ -1,0 +1,49 @@
+// Rails Files
+@import "WebElements/scaffolds";
+@import "defaults";
+
+// Boostrap/Bootswatch    // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootswatch/flatly/variables";
+@import "bootstrap";
+@import "bootswatch/flatly/bootswatch";
+//@import 'jquery-ui/datepicker.css';
+@import 'jquery.timepicker.css';
+@import 'bootstrap-datepicker';
+
+// Libraries
+@import "toastr.min";                   // Notification library
+@import "parsley";                      // look into replacing this with requiredJS
+@import "rrssb";                        // Ridiculously Responsive Social Sharing Buttons
+@import "font-awesome";                 // Icon Library
+@import "awesome-bootstrap-checkbox";   // Stylized Checkboxes
+
+// My Code
+@import "helpers";        // CSS Helper classes
+
+@import "WebElements/Override/bootstrap_fixes";   // Bootstrap fixes
+@import "WebElements/Override/bootstrap_nav";     // custom Bootstrap Nav colors
+@import "WebElements/Override/login_signup"; 			// signup page specific elements
+@import "WebElements/Override/bootstrap_navtabs"; // nav-tabs implementation
+@import "WebElements/Override/inputPlaceholders"; // placeholder styling for input elements
+@import "WebElements/Override/signup"; 						// signup page specific elements
+@import "WebElements/Centering";                  // Special element centering classes
+@import "WebElements/customButtons";              // custom Bootstrap Buttons
+@import "WebElements/CustomLinks";                // custom links
+@import "WebElements/StickyFooter";               // Footer CSS
+
+@import "WebElements/event_card";     // CSS For EventCards
+@import "PageSpecific/events";        // CSS For Events Page
+@import "PageSpecific/home";          // CSS For Home Page
+@import "PageSpecific/LoginStyle";    // UI design for Login page
+@import "PageSpecific/tickets";       // CSS For Tickets Page
+
+@import "Social/SocialLoginButtons";  // Facebook Login Button
+@import "Social/Instafeed";           // Styling for Instafeed
+
+
+
+// website-wide background-color
+body {
+  background-color: #eee;
+}

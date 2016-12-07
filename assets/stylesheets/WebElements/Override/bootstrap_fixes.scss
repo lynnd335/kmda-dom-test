@@ -1,0 +1,15 @@
+
+
+// fix
+th { text-align: center; }
+li { font-weight: normal; }
+
+/* bootstrap button class has grey text for some reason; this fixes that */
+a.btn { color: white; }
+
+/* bootstrap-sass gem was messing up label + checkbox display, whereby checkbox displayed on top of label */
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: relative;
+  margin-left: 0;
+}

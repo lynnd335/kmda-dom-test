@@ -1,0 +1,96 @@
+
+/* --------------------------------- */
+/*     Bill's Additional Classes     */
+/* --------------------------------- */
+.form-signin-header {
+  width: 100%;
+  text-align: center;
+}
+.header-komeeda {
+  letter-spacing:3px;
+  font-size: 3.5em; 
+}
+.form-signin-button-box { 
+  margin-top: .5em;
+  font-weight: bold;
+}
+
+/* --------------------------------- */
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin-wide {
+  max-width: 700px;
+}
+.form-signin .form-signin-header,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+
+
+/*.signupTable { margin: auto; }
+.signupTable td { padding: 5px; }
+.signupTable th { text-align: left; }
+.signupTable select { width: 100%; }
+.signupTable .buttons { text-align: right; }
+
+input[type="radio"].toggle:checked + label {
+  background-image: linear-gradient(to top,#969696,#727272);
+  box-shadow: inset 0 1px 6px rgba(41, 41, 41, 0.2),
+                    0 1px 2px rgba(0, 0, 0, 0.05);
+  cursor: default;
+  color: #E6E6E6;
+  border-color: transparent;
+  text-shadow: 0 1px 1px rgba(40, 40, 40, 0.75);
+}
+
+input[type="radio"].toggle + label {
+  width: 3em;
+}
+
+input[type="radio"].toggle:checked + label.btn:hover {
+  background-color: inherit;
+  background-position: 0 0;
+  transition: none;
+}
+
+input[type="radio"].toggle-left + label {
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+input[type="radio"].toggle-right + label {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}*/

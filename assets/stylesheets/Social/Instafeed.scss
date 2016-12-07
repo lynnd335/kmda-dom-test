@@ -1,0 +1,31 @@
+/* --------------------------------- */
+/*     Instafeed classes             */
+/* --------------------------------- */
+#instafeed {
+  height: 175px;
+  overflow: hidden;
+}
+#instafeed img {
+  margin: 10px;
+  display: inline-block;
+  position: relative;
+
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+}
+#instafeed img:hover {
+    position: relative;
+    z-index: 999;
+    transform: scale(1.1, 1.1);
+    
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+}
+
+/* --------------------------------- */
