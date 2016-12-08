@@ -20,7 +20,7 @@ Sign Up Left Column, beginning with "Fun Eating Experiences"
 .sign-up-p-left{
   white-space: normal;
   color: white;
-  font-size: 150%;
+  font-size: 1.5em;
   margin-top: 0.25em;
   margin-right: 2em;
 }
@@ -45,7 +45,7 @@ Right Column
 */
 
 #fde-m{
-  /*mobile-only, right column display of "fun dining experiences" image */
+  //mobile-only, right column display of "fun dining experiences" image 
    display: none;
 }
 
@@ -100,21 +100,46 @@ Right Column
 }
 
 .secondary-btn:hover{
-
-  margin-top: 10px; 
-  font-size: 1.5em; 
-  padding: 0.5em;
   color: transparent;
   background-color: rgba(0,0,0,0.6) !important;
   border: 1px solid transparent;
-  font-weight: bold;
   transition: background 0.5s linear,
               color 0.5s ease;
 }
 
-/*Media Queries - Phone Portrait*/
+//tertiary button is for purple bg/white text when positioned on white backgrounds
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px)
+.tertiary-btn{
+  white-space: normal;
+  margin-top: 10px; 
+  font-size: 1.5em; 
+  padding: 0.5em;
+  color: #fff;
+  background-color: #7f1a67;
+  border: 3px solid #fff;
+  font-weight: bold;
+  transition: background 0.25s linear,
+              color 0.25s ease,
+              border 0.1s ease;
+}
+
+.tertiary-btn:hover{
+  color: #7f1a67;
+  background-color: #fff;
+  border: 3px solid #7f1a67;
+  transition: background 0.5s linear,
+              color 0.5s ease,
+              border 0.1s ease;
+}
+
+.centered-default{
+  margin-top : 0%;
+}
+
+
+// Media Queries - Phone Portrait
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait)
 {
   #sign-up-left-col{
    display: none;
@@ -131,19 +156,17 @@ Right Column
     width: 95%;
   }
   #sign-up-p-right{
-    font-size: 80%;
+    font-size: 0.8em;
   }
 }
+
+// Phone Landscape
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape)
 {
   #sign-up-p-right{
-    font-size: 150%;
+    font-size: 1.5em;
   }
 }
-
-
-
-
 
 
